@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: Connector
+  datasource:
+    url: jdbc:postgresql://localhost:15432/postgres
+    username: user
+    password: password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+  kafka:
+    consumer:
+      auto-offset-reset: earliest
+      group-id: internal-consumer
+      bootstrap-servers: localhost:9092
+server:
+  port: 9999
