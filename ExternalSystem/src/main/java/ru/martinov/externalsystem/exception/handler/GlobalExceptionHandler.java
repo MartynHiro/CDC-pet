@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import ru.martinov.externalsystem.exception.UserAlreadyExistsException;
+import ru.martinov.externalsystem.exception.UserNotFoundException;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -19,6 +20,16 @@ public class GlobalExceptionHandler {
                                                       UserAlreadyExistsException exception) {
         return ErrorResponse.builder()
                 .detail("Пользователь с почтой " + exception.getMessage() + " уже существует")
+                .request(request.getMethod() + " " + request.getRequestURI())
+                .time(getTime())
+                .build();
+    }
+
+    @ExceptionHandler(UserNotFoundException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public ErrorResponse idNotFoundInDB(HttpServletRequest request, UserNotFoundException exception) {
+        return ErrorResponse.builder()
+                .detail("Пользователя с таким id " + exception.getMessage() + " не существует")
                 .request(request.getMethod() + " " + request.getRequestURI())
                 .time(getTime())
                 .build();

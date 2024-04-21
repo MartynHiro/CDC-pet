@@ -7,4 +7,6 @@ import ru.martinov.externalsystem.domain.dto.ResponseForUserDto;
 @Service
 public interface UserService {
     ResponseForUserDto saveUser(MessageFromUserDto messageFromUserDto);
+
+    ResponseForUserDto deleteUser(Long id);
 }

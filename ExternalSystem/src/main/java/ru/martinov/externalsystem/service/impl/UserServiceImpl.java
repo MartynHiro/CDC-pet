@@ -8,6 +8,7 @@ import ru.martinov.externalsystem.domain.dto.MessageFromUserDto;
 import ru.martinov.externalsystem.domain.dto.ResponseForUserDto;
 import ru.martinov.externalsystem.domain.entity.User;
 import ru.martinov.externalsystem.exception.UserAlreadyExistsException;
+import ru.martinov.externalsystem.exception.UserNotFoundException;
 import ru.martinov.externalsystem.repository.UserRepository;
 import ru.martinov.externalsystem.service.UserService;
 
@@ -15,7 +16,7 @@ import ru.martinov.externalsystem.service.UserService;
 @Service
 @RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
-    private static final String SUCCESSFUL_MESSAGE = "Пользователь был успешно сохранен";
+    private static final String SUCCESSFUL_MESSAGE = "Операция успешно проведена";
 
     private final UserRepository userRepository;
 
@@ -32,6 +33,17 @@ public class UserServiceImpl implements UserService {
         return new ResponseForUserDto(SUCCESSFUL_MESSAGE);
     }
 
+    @Override
+    @Transactional
+    public ResponseForUserDto deleteUser(Long id) {
+        if (!userRepository.existsById(id)) {
+            throw new UserNotFoundException(id);
+        }
+        userRepository.deleteById(id);
+        log.info("Пользователь с id {} успешно удален", id);
+        return new ResponseForUserDto(SUCCESSFUL_MESSAGE);
+    }
+
     private void createUser(MessageFromUserDto messageFromUserDto) {
         String email = messageFromUserDto.email();
         var user = User.builder()
@@ -41,4 +53,5 @@ public class UserServiceImpl implements UserService {
         userRepository.save(user);
         log.info("Пользователь {} успешно создан", email);
     }
+
 }

@@ -2,17 +2,21 @@ spring:
   application:
     name: Connector
   datasource:
-    url: jdbc:postgresql://localhost:15432/postgres
-    username: user
-    password: password
+    url: jdbc:postgresql://localhost:15432/debezium_slave
+    username: postgres
+    password: postgres
     driver-class-name: org.postgresql.Driver
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     show-sql: true
-  kafka:
-    consumer:
-      auto-offset-reset: earliest
-      group-id: internal-consumer
-      bootstrap-servers: localhost:9092
 server:
   port: 9999
+
+# Определяем БД откуда будем читать
+master:
+  datasource:
+    host: localhost
+    port: 5432
+    database: debezium_master
+    username: postgres
+    password: postgres

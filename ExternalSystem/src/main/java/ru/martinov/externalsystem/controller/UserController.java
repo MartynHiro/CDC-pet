@@ -4,6 +4,8 @@ import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -34,4 +36,16 @@ public interface UserController {
                     schema = @Schema(implementation = GlobalExceptionHandler.ErrorResponse.class))})
     @PostMapping
     ResponseForUserDto addUser(@RequestBody MessageFromUserDto messageFromUserDto);
+
+    @ApiResponse(responseCode = CODE_OK, description = OK,
+            content = {@Content(mediaType = "application/json",
+                    schema = @Schema(implementation = ResponseForUserDto.class))})
+    @ApiResponse(responseCode = CODE_BAD_REQUEST, description = BAD_REQUEST,
+            content = {@Content(mediaType = "application/json",
+                    schema = @Schema(implementation = GlobalExceptionHandler.ErrorResponse.class))})
+    @ApiResponse(responseCode = CODE_INTERNAL_SERVER_ERROR, description = INTERNAL_SERVER_ERROR,
+            content = {@Content(mediaType = "application/json",
+                    schema = @Schema(implementation = GlobalExceptionHandler.ErrorResponse.class))})
+    @DeleteMapping("/{id}")
+    ResponseForUserDto deleteUser(@PathVariable Long id);
 }
