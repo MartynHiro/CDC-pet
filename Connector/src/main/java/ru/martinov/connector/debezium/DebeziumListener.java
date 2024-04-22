@@ -1,4 +1,4 @@
-package ru.martinov.connector.listener;
+package ru.martinov.connector.debezium;
 
 import io.debezium.config.Configuration;
 import io.debezium.data.Envelope;

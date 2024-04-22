@@ -31,4 +31,8 @@ public class User {
 
     @Column(name = "EMAIL")
     private String email;
+
+    //отправлено ли в кафку
+    @Column(name = "IS_SEND")
+    private Boolean isSend = false;
 }

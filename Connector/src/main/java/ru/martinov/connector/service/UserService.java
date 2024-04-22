@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 import ru.martinov.connector.domain.entity.User;
 import ru.martinov.connector.repository.UserRepository;
 
-import java.util.List;
 import java.util.Map;
 
 @Slf4j
@@ -16,10 +15,6 @@ import java.util.Map;
 public class UserService {
 
     private final UserRepository userRepository;
-
-    public List<User> getAllUsers() {
-        return userRepository.findAll();
-    }
 
     public void replicateData(Map<String, Object> eventMap, Envelope.Operation operation) {
         final User currentUser = mapToUser(eventMap);

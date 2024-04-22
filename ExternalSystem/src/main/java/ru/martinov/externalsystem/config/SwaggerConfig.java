@@ -6,9 +6,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class SwaggerConfig {
-    /**
-     * По адресу http://localhost:{порт_приложения}/swagger-ui/index.html мы можем увидеть сваггер
-     */
+
     @Bean
     public GroupedOpenApi customOpenAPI() {
         return GroupedOpenApi.builder()
