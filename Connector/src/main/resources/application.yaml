@@ -16,6 +16,11 @@ spring:
     topic-name: user
     bootstrap-servers: localhost:9092
 
+  quartz:
+    job-store-type: jdbc
+    jdbc:
+      initialize-schema: never
+
 server:
   port: 9999
 
