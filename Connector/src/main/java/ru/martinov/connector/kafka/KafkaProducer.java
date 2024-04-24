@@ -10,6 +10,7 @@ import ru.martinov.connector.domain.dto.KafkaUserMessage;
 import ru.martinov.connector.domain.entity.User;
 import ru.martinov.connector.domain.mapper.MessageMapper;
 
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 @Slf4j
@@ -22,11 +23,14 @@ public class KafkaProducer {
     @Value(value = "${spring.kafka.topic-name}")
     private String topicName;
 
-    public void sendMessageToKafka(User user) {
-        CompletableFuture<SendResult<String, KafkaUserMessage>> resultFuture = kafkaTemplate
-                .send(topicName, messageMapper.convertUserIntoKafkaMessage(user));
+    public void sendMessageToKafka(List<User> users) {
+        //TODO переписать на батч отправку
+        for (User user : users) {
+            CompletableFuture<SendResult<String, KafkaUserMessage>> resultFuture = kafkaTemplate
+                    .send(topicName, messageMapper.convertUserIntoKafkaMessage(user));
 
-        checkMessageSending(resultFuture);
+            checkMessageSending(resultFuture);
+        }
     }
 
     private void checkMessageSending(CompletableFuture<SendResult<String, KafkaUserMessage>> future) {

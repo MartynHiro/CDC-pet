@@ -19,12 +19,12 @@ services:
       - POSTGRES_DB=debezium_slave
 
   pgadmin:
-        image: dpage/pgadmin4
-        environment: 
-            - PGADMIN_DEFAULT_EMAIL=martinovserg@gmail.com
-            - PGADMIN_DEFAULT_PASSWORD=martinovserg
-        ports:
-            - '5051:80'
+    image: dpage/pgadmin4
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=martinovserg@gmail.com
+      - PGADMIN_DEFAULT_PASSWORD=martinovserg
+    ports:
+      - '5051:80'
 
   zookeeper:
     image: confluentinc/cp-zookeeper:5.5.3

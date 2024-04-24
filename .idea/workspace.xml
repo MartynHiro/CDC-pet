@@ -4,53 +4,82 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12fd02a5-c431-49df-b6ba-699d91d464b6" name="Changes" comment="обнуление кода коннектора для пересмотра подхода">
-      <change afterPath="$PROJECT_DIR$/Connector/src/main/java/ru/martinov/connector/config/DebeziumConnectorConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Connector/src/main/java/ru/martinov/connector/listener/DebeziumListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Connector/src/main/java/ru/martinov/connector/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ExternalSystem/src/main/java/ru/martinov/externalsystem/config/SwaggerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ExternalSystem/src/main/java/ru/martinov/externalsystem/exception/UserNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1a88009c-8c23-4fa9-9cf1-9fd99ff0a717.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1a88009c-8c23-4fa9-9cf1-9fd99ff0a717/storage_v2/_src_/database/postgres.edMnLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1a88009c-8c23-4fa9-9cf1-9fd99ff0a717/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1a88009c-8c23-4fa9-9cf1-9fd99ff0a717/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1a88009c-8c23-4fa9-9cf1-9fd99ff0a717/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5fe959be-a4db-40ac-b95d-23c517084705.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5fe959be-a4db-40ac-b95d-23c517084705/storage_v2/_src_/database/postgres.edMnLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5fe959be-a4db-40ac-b95d-23c517084705/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5fe959be-a4db-40ac-b95d-23c517084705/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5fe959be-a4db-40ac-b95d-23c517084705/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/2/02c3ebc8e5b48ced6b21049be87b80cde00e0eb4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/5/35b8c13cf2eb2a194eada000eb310d65aed53b2a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/e/7e05d38d6814bba50d312339d30a67195222b426" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/2/8274b0bf1471acd75d7681966b688948cbd679f1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/d/adaad4c245d319d98a17850f9174b6e755a7d9ca" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/4/e4bf12d12db86c7969ec9336f39967b20290cc8e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/3/f3a2505b4ed51a8f02d302d848d97bbc2b41f273" beforeDir="false" />
+    <list default="true" id="12fd02a5-c431-49df-b6ba-699d91d464b6" name="Changes" comment="quartz база">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/2bb5dc4d-2e2b-4e7f-a1ce-2f3415b5ebbc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/2bb5dc4d-2e2b-4e7f-a1ce-2f3415b5ebbc/storage_v2/_src_/database/debezium_master.lly1Ew.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/2bb5dc4d-2e2b-4e7f-a1ce-2f3415b5ebbc/storage_v2/_src_/database/debezium_master.lly1Ew/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/2bb5dc4d-2e2b-4e7f-a1ce-2f3415b5ebbc/storage_v2/_src_/database/debezium_master.lly1Ew/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/2bb5dc4d-2e2b-4e7f-a1ce-2f3415b5ebbc/storage_v2/_src_/database/debezium_master.lly1Ew/schema/public.abK9xQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/3e8c0a4e-8d82-4b8b-8c24-bade0b56ec59.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/3e8c0a4e-8d82-4b8b-8c24-bade0b56ec59/storage_v2/_src_/database/debezium_slave.I9k16A.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/3e8c0a4e-8d82-4b8b-8c24-bade0b56ec59/storage_v2/_src_/database/debezium_slave.I9k16A/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/3e8c0a4e-8d82-4b8b-8c24-bade0b56ec59/storage_v2/_src_/database/debezium_slave.I9k16A/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/3e8c0a4e-8d82-4b8b-8c24-bade0b56ec59/storage_v2/_src_/database/debezium_slave.I9k16A/schema/public.abK9xQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_19_04_2024_17_49_[Changes]/ca8195d75696bc020f15423263ff2b460ea8a9e9" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_19_04_2024_17_49_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_19_04_2024_17_49_[Changes]1/ca8195d75696bc020f15423263ff2b460ea8a9e9" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_19_04_2024_17_49_[Changes]1/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_19_04_2024_17_49__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_19_04_2024_17_49__Changes_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/9/096ce4132054d7c3dd2ce1e4f792dd9c679946be" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/a/0a0c7ad17cd51d0e8eb0868dcfd5e511e62008db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/c/0c58b70e10c6c7498619389cc72b157dbe7f56df" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/f/0ff0e51366458c1fe71a247929c1ec4e657ef765" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/8/180d83aa5b280eb3c09ce305ac578d1ad8104973" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/8/18ba7ed21f246fe903f37cec3b0a45e88996bec6" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/5/25b80ba10581fefac27af5f9eebbea451b9c267c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/8/28e6035bd0694725f6cc4efe616eed0017426ab8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/b/2b1f27d8898daec8e77ef7eb13712bac107de0b7" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/d/2dbbf97d0c48a73b6673bc7268c730997b9a180c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/3/33ce0f5d196238b6299a848c5517140f0c272aaf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/9/4944b69bf05a8e4802f9d6eaa3df25a5e46e0952" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/7/770c291bbbe6a32e63a330501d8e0d10e68a8e2a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/a/7a234f06fdab45ca7d109b112f9ca35dae67f418" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/c/7c06ab0340026e32d81a8833b874d10643054179" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/9/89d33636e8cb86260788f56d9638271c173446d1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/a/8ace28d0f84ccb918eb25c9f6e36077461d942ce" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/0/a0c8777cfd766394cc653577bd67a3588d6e810c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/2/a2bc2fd84f70292d41f7ae88389f91b91843cead" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/e/ae030961af53d34589b7c28e2d645f9715d32daf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/1/c1ea5ca80913cadeebb4a0d33fb8878e771dc055" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/a/ca6b0be87264d7651b57534b3c4d0aa8c6fb68ec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/4/d4ff56e5abd7b8d5537275a3ef71c4684b13a92c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/0/f0d3065d6319440119cf90a5a1d0754882603130" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/a/faadb3093f05df5dff502fb12d61cf9c643d6b34" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/9/096ce4132054d7c3dd2ce1e4f792dd9c679946be" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/a/0a0c7ad17cd51d0e8eb0868dcfd5e511e62008db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/c/0c58b70e10c6c7498619389cc72b157dbe7f56df" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/f/0ff0e51366458c1fe71a247929c1ec4e657ef765" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/1/8/180d83aa5b280eb3c09ce305ac578d1ad8104973" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/1/8/18ba7ed21f246fe903f37cec3b0a45e88996bec6" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/2/5/25b80ba10581fefac27af5f9eebbea451b9c267c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/2/8/28e6035bd0694725f6cc4efe616eed0017426ab8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/2/b/2b1f27d8898daec8e77ef7eb13712bac107de0b7" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/2/d/2dbbf97d0c48a73b6673bc7268c730997b9a180c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/3/3/33ce0f5d196238b6299a848c5517140f0c272aaf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/9/4944b69bf05a8e4802f9d6eaa3df25a5e46e0952" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/7/7/770c291bbbe6a32e63a330501d8e0d10e68a8e2a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/7/a/7a234f06fdab45ca7d109b112f9ca35dae67f418" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/7/c/7c06ab0340026e32d81a8833b874d10643054179" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/8/9/89d33636e8cb86260788f56d9638271c173446d1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/8/a/8ace28d0f84ccb918eb25c9f6e36077461d942ce" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/0/a0c8777cfd766394cc653577bd67a3588d6e810c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/2/a2bc2fd84f70292d41f7ae88389f91b91843cead" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/e/ae030961af53d34589b7c28e2d645f9715d32daf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/1/c1ea5ca80913cadeebb4a0d33fb8878e771dc055" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/a/ca6b0be87264d7651b57534b3c4d0aa8c6fb68ec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/d/4/d4ff56e5abd7b8d5537275a3ef71c4684b13a92c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/0/f0d3065d6319440119cf90a5a1d0754882603130" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/a/faadb3093f05df5dff502fb12d61cf9c643d6b34" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Connector/src/main/java/ru/martinov/connector/service/KafkaService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/2/02c3ebc8e5b48ced6b21049be87b80cde00e0eb4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/3/5/35b8c13cf2eb2a194eada000eb310d65aed53b2a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/7/e/7e05d38d6814bba50d312339d30a67195222b426" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/8/2/8274b0bf1471acd75d7681966b688948cbd679f1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/d/adaad4c245d319d98a17850f9174b6e755a7d9ca" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/e/4/e4bf12d12db86c7969ec9336f39967b20290cc8e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/3/f3a2505b4ed51a8f02d302d848d97bbc2b41f273" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Connector/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Connector/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Connector/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Connector/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Connector/src/main/resources/db/changelog/v1.0/V1__01_create_users_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Connector/src/main/resources/db/changelog/v1.0/V1__01_create_users_table.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExternalSystem/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ExternalSystem/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExternalSystem/src/main/java/ru/martinov/externalsystem/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExternalSystem/src/main/java/ru/martinov/externalsystem/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExternalSystem/src/main/java/ru/martinov/externalsystem/controller/impl/UserControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExternalSystem/src/main/java/ru/martinov/externalsystem/controller/impl/UserControllerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExternalSystem/src/main/java/ru/martinov/externalsystem/exception/handler/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExternalSystem/src/main/java/ru/martinov/externalsystem/exception/handler/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExternalSystem/src/main/java/ru/martinov/externalsystem/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExternalSystem/src/main/java/ru/martinov/externalsystem/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExternalSystem/src/main/java/ru/martinov/externalsystem/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExternalSystem/src/main/java/ru/martinov/externalsystem/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExternalSystem/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/ExternalSystem/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Connector/src/main/java/ru/martinov/connector/kafka/KafkaProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Connector/src/main/java/ru/martinov/connector/kafka/KafkaProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Connector/src/main/java/ru/martinov/connector/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Connector/src/main/java/ru/martinov/connector/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +103,7 @@
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$/.." value="b" />
-        <entry key="$PROJECT_DIR$" value="embedded-debezium-fail" />
+        <entry key="$PROJECT_DIR$" value="quartz" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -104,48 +133,53 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Docker.ExternalSystem: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yaml.postgres2: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yaml: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml.db2: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml.db: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml.internal_db: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
-    "Maven.Connector [clean].executor": "Run",
-    "Maven.Connector [install].executor": "Run",
-    "Maven.Connector [package].executor": "Run",
-    "Maven.ExternalSystem [clean].executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "Spring Boot.ConnectorApplication.executor": "Run",
-    "Spring Boot.ExternalSystemApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "jdk.selected.JAVA_MODULE": "openjdk-21",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/pets/CDC-pet",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Docker.ExternalSystem: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yaml.kafka-connector: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yaml.kafka-streaming: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yaml.kafka: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yaml.postgres2: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yaml.zookeeper-connector: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yaml.zookeeper: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yaml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.db2: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.db: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.internal_db: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Connector [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Connector [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Connector [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.ExternalSystem [clean].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;Spring Boot.ConnectorApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ExternalSystemApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-21&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/projects/Kafka-pet&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\projects\CDC-pet\Connector\src\main\resources\db" />
@@ -174,14 +208,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExternalSystem: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="sourceFilePath" value="ExternalSystem/docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
       <deployment type="docker-compose.yml">
         <settings />
@@ -196,12 +222,12 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yaml.postgres2: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration name="docker-compose.yaml.kafka-connector: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
           <option name="services">
             <list>
-              <option value="postgres2" />
+              <option value="kafka-connector" />
             </list>
           </option>
           <option name="sourceFilePath" value="docker-compose.yaml" />
@@ -209,23 +235,41 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="sourceFilePath" value="docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
-    <configuration name="docker-compose.yml.internal_db: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration name="docker-compose.yaml.kafka-streaming: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
           <option name="services">
             <list>
-              <option value="internal_db" />
+              <option value="kafka-streaming" />
             </list>
           </option>
-          <option name="sourceFilePath" value="docker-compose.yml" />
+          <option name="sourceFilePath" value="docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yaml.kafka: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="kafka" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yaml.zookeeper: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="zookeeper" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yaml" />
         </settings>
       </deployment>
       <method v="2" />
@@ -233,10 +277,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yaml.postgres2: Compose Deployment" />
-        <item itemvalue="Docker.ExternalSystem: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yml.internal_db: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yaml.kafka: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yaml.zookeeper: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yaml.kafka-streaming: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yaml.kafka-connector: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -264,6 +308,12 @@
       <workItem from="1713592949192" duration="1760000" />
       <workItem from="1713684193534" duration="9000" />
       <workItem from="1713689396460" duration="11892000" />
+      <workItem from="1713703691072" duration="304000" />
+      <workItem from="1713766058825" duration="4963000" />
+      <workItem from="1713796382349" duration="606000" />
+      <workItem from="1713798081391" duration="1967000" />
+      <workItem from="1713857981934" duration="2000000" />
+      <workItem from="1713942373780" duration="12901000" />
     </task>
     <task id="LOCAL-00001" summary="обнуление кода коннектора для пересмотра подхода">
       <option name="closed" value="true" />
@@ -273,7 +323,55 @@
       <option name="project" value="LOCAL" />
       <updated>1713535720489</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Настроена работа коннектора и репликация в другую БД">
+      <option name="closed" value="true" />
+      <created>1713703876624</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1713703876624</updated>
+    </task>
+    <task id="LOCAL-00003" summary="добавил реадми">
+      <option name="closed" value="true" />
+      <created>1713768213006</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1713768213006</updated>
+    </task>
+    <task id="LOCAL-00004" summary="начал написание кафки для коннектора">
+      <option name="closed" value="true" />
+      <created>1713800045559</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1713800045559</updated>
+    </task>
+    <task id="LOCAL-00005" summary="реф">
+      <option name="closed" value="true" />
+      <created>1713949235324</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1713949235324</updated>
+    </task>
+    <task id="LOCAL-00006" summary="реф">
+      <option name="closed" value="true" />
+      <created>1713949262543</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1713949262543</updated>
+    </task>
+    <task id="LOCAL-00007" summary="quartz база">
+      <option name="closed" value="true" />
+      <created>1713949451769</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1713949451769</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,6 +391,11 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="База для источника и коннектора, источник готов" />
     <MESSAGE value="обнуление кода коннектора для пересмотра подхода" />
-    <option name="LAST_COMMIT_MESSAGE" value="обнуление кода коннектора для пересмотра подхода" />
+    <MESSAGE value="Настроена работа коннектора и репликация в другую БД" />
+    <MESSAGE value="добавил реадми" />
+    <MESSAGE value="начал написание кафки для коннектора" />
+    <MESSAGE value="реф" />
+    <MESSAGE value="quartz база" />
+    <option name="LAST_COMMIT_MESSAGE" value="quartz база" />
   </component>
 </project>
