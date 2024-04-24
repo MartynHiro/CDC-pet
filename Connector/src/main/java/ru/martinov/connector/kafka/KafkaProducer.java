@@ -23,21 +23,18 @@ public class KafkaProducer {
     private String topicName;
 
     public void sendMessageToKafka(User user) {
-        String userName = user.getName();
         CompletableFuture<SendResult<String, KafkaUserMessage>> resultFuture = kafkaTemplate
                 .send(topicName, messageMapper.convertUserIntoKafkaMessage(user));
 
-        checkMessageSending(resultFuture, userName);
+        checkMessageSending(resultFuture);
     }
 
-    private void checkMessageSending(CompletableFuture<SendResult<String, KafkaUserMessage>> future, String userName) {
+    private void checkMessageSending(CompletableFuture<SendResult<String, KafkaUserMessage>> future) {
         future.whenComplete((result, exception) -> {
             if (exception == null) {
-                log.info("Сообщение пользователя {} было отправлено в топик {} с оффсетом {}",
-                        userName, topicName, result.getRecordMetadata().offset());
+                log.info("Сообщение было отправлено в топик {} с оффсетом {}", topicName, result.getRecordMetadata().offset());
             } else {
-                log.error("У пользователя {} не получилось отправить сообщение в топик {}", userName, topicName);
-                throw new KafkaNotAvailableException(userName);
+                log.error("Не получилось отправить сообщение в топик {}", topicName);
             }
         });
     }

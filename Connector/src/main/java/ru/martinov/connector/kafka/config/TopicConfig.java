@@ -1,4 +1,4 @@
-package ru.martinov.connector.config;
+package ru.martinov.connector.kafka.config;
 
 import org.apache.kafka.clients.admin.NewTopic;
 import org.springframework.beans.factory.annotation.Value;

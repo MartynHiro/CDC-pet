@@ -8,9 +8,16 @@
 
 которая играет роль outbox для дальнейшего стриминга в Kafka
 
-# Other
+# Other/ стек
 * В docker-compose содержится всё необходимое для корректной работы
 * 
   http://localhost:5051 по этому адресу можно подключиться к pgAdmin-web-ui с кредами админа из compose
-* С помощью Liquibase создаются таблицы в БД для обоих сервисов
-* Версия java 17
+* java 17
+* Maven
+* Liquibase 
+* Kafka
+* Debezium
+* Quartz
+* Mapstruct
+* Swagger
+* Lombok
